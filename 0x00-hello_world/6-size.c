@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	int charvar = (int)sizeof(char);
-	int intvar =  (int)sizeof(int);
-	int longintvar = (int)sizeof(long int);
-	int longlongintvar = (int)sizeof(long long int);
-	int floatvar = (int)sizeof(float);
+	int charvar = (int) sizeof(char);
+	int intvar =  (int) sizeof(int);
+	int longintvar = (int) sizeof(long int);
+	int longlongintvar = (int) sizeof(long long int);
+	int floatvar = (int) sizeof(float);
 
 	printf("Size of a char %d byte(s)\n", charvar);
 	printf("Size of an int %d byte(s)\n", intvar);
