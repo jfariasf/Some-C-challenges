@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * main - Prints a message to the standard error
  *
@@ -7,8 +6,8 @@
 
 int main(void)
 {
-	char message_stderr[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	fwrite(&message_stderr, 1, sizeof(message_stderr), stderr);
+	write(2, message, sizeof(message));
 	return (1);
 }
