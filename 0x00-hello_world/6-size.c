@@ -14,10 +14,10 @@ int main(void)
 	int longlongintvar = (int) sizeof(long long int);
 	int floatvar = (int) sizeof(float);
 
-	printf("Size of a char %d byte(s)\n", charvar);
-	printf("Size of an int %d byte(s)\n", intvar);
-	printf("Size of a long int %d byte(s)\n", longintvar);
-	printf("Size of a long long int %d byte(s)\n", longlongintvar);
-	printf("Size of a float %d byte(s)\n", floatvar);
+	printf("Size of a char: %d byte(s)\n", charvar);
+	printf("Size of an int: %d byte(s)\n", intvar);
+	printf("Size of a long int: %d byte(s)\n", longintvar);
+	printf("Size of a long long int: %d byte(s)\n", longlongintvar);
+	printf("Size of a float: %d byte(s)\n", floatvar);
 	return (0);
 }
