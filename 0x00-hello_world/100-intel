@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -masm=intel $CFILE -o $(echo $CFILE | rev | cut -c3- | rev)
+gcc -S -masm=intel $CFILE -o $(echo $CFILE | rev | cut -c3- | rev).s
