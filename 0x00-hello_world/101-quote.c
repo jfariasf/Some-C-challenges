@@ -2,7 +2,7 @@
 /**
  * main - Prints a message to the standar error
  *
- * Return: Always 0 (Success)
+ * Return: Always 1 (Success)
  */
 
 int main(void)
