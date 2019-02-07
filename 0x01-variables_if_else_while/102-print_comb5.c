@@ -21,12 +21,11 @@ int main(void)
 				{
 					if ((i + j != k + l) || (i != k && j != l))
 					{
-						if (i > 0x30 || j > 0x30 ||
-							k > 0x30 || l > 0x31)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					if (i > 0x30 || j > 0x30 || k > 0x30 || l > 0x31)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 						putchar(i);
 						putchar(j);
 						putchar(' ');
