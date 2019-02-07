@@ -19,7 +19,7 @@ int main(void)
 			{
 				for (l = j; l <= 0x39; l++)
 				{
-					if ((i + j != k + l))
+					if ((i + j != k + l) || (i!=k && j!=l))
 					{
 						if (i > 0x30 || j > 0x30 ||
 							k > 0x30 || l > 0x31)
