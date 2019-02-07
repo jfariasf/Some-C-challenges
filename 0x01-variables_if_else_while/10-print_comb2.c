@@ -9,17 +9,18 @@ int main(void)
 	int i;
 	int j;
 
-	for (i = 0x30; i < 0x3A; i++)
+	for (i = 0x30; i <= 0x39; i++)
 	{
-		for (j = 0x30; j < 0x3A; j++)
+		for (j = 0x30; j <= 0x39; j++)
 		{
-			putchar(i);
-			putchar(j);
-			if (i < 0x3A && j < 0x39)
+			if ((i > 0x30) || (j > 0x30))
 			{
 				putchar(',');
 				putchar(' ');
 			}
+			putchar(i);
+			putchar(j);
+			
 		}
 	}
 	putchar(0x0A);
