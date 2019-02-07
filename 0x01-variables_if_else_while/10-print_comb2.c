@@ -20,7 +20,6 @@ int main(void)
 			}
 			putchar(i);
 			putchar(j);
-			
 		}
 	}
 	putchar(0x0A);
