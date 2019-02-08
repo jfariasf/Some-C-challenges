@@ -10,6 +10,7 @@ int main(void)
 	int j;
 	int k;
 	int l;
+	int pass;
 
 	for (i = 0x30; i <= 0x39; i++)
 	{
@@ -21,7 +22,7 @@ int main(void)
 				{
 					if (k % 0x10 * 0x10 + l % 0x10 <= i % 0x10 * 0x10 + j % 0x10)
 						continue;
-					if (i > 0x30 || j > 0x30 || k > 0x30 || l > 0x31)
+					if (pass == 1)
 					{
 						putchar(',');
 						putchar(' ');
@@ -31,6 +32,7 @@ int main(void)
 						putchar(' ');
 						putchar(k);
 						putchar(l);
+						pass = 1;
 				}
 			}
 		}
