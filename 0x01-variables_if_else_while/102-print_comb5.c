@@ -15,12 +15,12 @@ int main(void)
 	{
 		for (j = 0x30; j <= 0x39; j++)
 		{
-			for (k = i; k <= 0x39; k++)
+			for (k = 0x30; k <= 0x39; k++)
 			{
-				for (l = j; l <= 0x39; l++)
+				for (l = 0x30; l <= 0x39; l++)
 				{
-					if ((i + j != k + l) || (i != k && j != l))
-					{
+					if (k % 0x10 * 0x10 + l % 0x10 <= i % 0x10 * 0x10 + j % 0x10)
+						continue;
 					if (i > 0x30 || j > 0x30 || k > 0x30 || l > 0x31)
 					{
 						putchar(',');
@@ -31,7 +31,6 @@ int main(void)
 						putchar(' ');
 						putchar(k);
 						putchar(l);
-					}
 				}
 			}
 		}
