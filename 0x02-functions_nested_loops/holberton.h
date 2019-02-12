@@ -5,9 +5,9 @@
 /*Sorts an integer array. Takes a pointer to the first element and the length of the array as input. 
 Returns 0 on successful sort.*/
 int _putchar(int); 
-int _islower(int);
-void print_alphabet_x10(void);
 void print_alphabet(void);
+void print_alphabet_x10(void);
+int _islower(int);
 int _isalpha(int c);
 int print_sign(int n);
 int _abs(int);
