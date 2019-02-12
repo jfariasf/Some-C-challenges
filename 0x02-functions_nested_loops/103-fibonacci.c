@@ -9,7 +9,6 @@ int main(void)
 	int j = 1;
 	int k = 1;
 	int tmp;
-	int start = 0;
 	int buf = 0;
 
 	while (k <= 4000000)
@@ -19,7 +18,6 @@ int main(void)
 		tmp = k;
 		k = j + k;
 		j = tmp;
-		start = 1;
 	}
 	printf("%d\n", buf);
 	return (0);
