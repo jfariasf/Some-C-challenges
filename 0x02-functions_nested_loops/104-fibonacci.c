@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	long double j = 1;
+	long double j = 0;
 	long double k = 1;
 	long double tmp;
 	int start = 0;
