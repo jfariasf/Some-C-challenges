@@ -6,11 +6,11 @@
 */
 int main(void)
 {
-	long j = 1;
-	long k = 1;
-	long tmp;
+	int j = 1;
+	int k = 1;
+	int tmp;
 	int start = 0;
-	long buf = 0;
+	int buf = 0;
 
 	while (k <= 4000000)
 	{
@@ -21,6 +21,6 @@ int main(void)
 		j = tmp;
 		start = 1;
 	}
-	printf("%ld\n", buf);
+	printf("%d\n", buf);
 	return (0);
 }
