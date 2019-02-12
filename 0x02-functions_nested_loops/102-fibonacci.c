@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main - Prints the first 50 fibonacci numbers sepparated by a comma and a space
+* main - Prints the first 50 fibonacci numbers sepparated by a comma
 *
 * Return: Always 0 (Success)
 */
