@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-	long double j = 0;
-	long double k = 1;
-	long double tmp;
+	double j = 1;
+	double k = 1;
+	double tmp;
 	int start = 0;
 	int i;
 
@@ -16,7 +16,7 @@ int main(void)
 	{
 		if (start)
 			printf(", ");
-		printf("%.0Lf", k);
+		printf("%.0f", k);
 		tmp = k;
 		k = j + k;
 		j = tmp;
