@@ -14,6 +14,6 @@ int main(void)
 		if ((i % 3 == 0) || (i % 5 == 0))
 			acc += i;
 	}
-	printf("%d\n", i);
+	printf("%d\n", acc);
 	return (0);
 }
