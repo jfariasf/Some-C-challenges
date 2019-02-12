@@ -12,7 +12,7 @@ int main(void)
 	int start = 0;
 	int i;
 
-	for (i = 0; i <= 97; i++)
+	for (i = 0; i <= 98; i++)
 	{
 		if (start)
 			printf(", ");
