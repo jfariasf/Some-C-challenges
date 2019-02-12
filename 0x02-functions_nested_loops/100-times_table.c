@@ -39,9 +39,12 @@ void print_times_table(int n)
 			}
 			else
 			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
+				if (j != 0)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+				}
 				_putchar(0x30 + res);
 			}
 			first = 1;
