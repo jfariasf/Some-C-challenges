@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
+void calculate_last(unsigned long, int);
 /**
 * main - Prints the first 98 fibonacci numbers separated by a comma and a space
 *
@@ -8,44 +9,58 @@
 int main(void)
 {
 	int i;
-	unsigned long k=1;
-	unsigned long j=1;
+	unsigned long k = 1;
+	unsigned long j = 0;
 	unsigned long tmp;
-	unsigned long partial1;
-	unsigned long partial2;
-	int partialresult;
-	int digittmp;
+	int k1 = 0;
+	int j1 = 0;
 	int start = 0;
+	int start2 = 0;
+	int tmp2;
 
 	for (i = 0; i < 98; i++)
 	{
 		if (start)
 			printf(", ");
-		if (k > 100000000000000000){
-			partial1 = k % 10;
-			partial2 = j % 10;			
-			k /= 10;
-			j /= 10;
-			tmp =k;
-			k=j+k;
-			j=tmp;
-			partialresult=partial1+partial2;
-			if(partialresult>9)
+		if ((k > ULONG_MAX / 10) || (start2 == 1))
+		{
+			if (start2 == 0)
 			{
-				partialresult=((k%10)*10)+(partialresult);
-				
+				k1 = (int) (k % 1000);
+				j1 = (int) (j % 1000);
+				k /= 1000;
+				j /= 1000;
 			}
-			printf("f(%d) %lu%d",i,k,partialresult);
-		}
-		else{
-		printf("f(%i) %lu",i,k);
+			tmp2 = k1;
+			k1 = j1 + k1;
+			j1 = tmp2;
+			start2 = 1;
 		}
 		tmp = k;
 		k = j + k;
 		j = tmp;
+		calculate_last(k, k1);
 		start = 1;
-		
 	}
 	printf("\n");
 	return (0);
+
+}
+/**
+* calculate_last - Prints the first 98 fibonacci numbers
+* @k: value to print but 3 digits
+* @k1: last 3 digits
+* Return: Always 0 (Success)
+*/
+void calculate_last(unsigned long k, int k1)
+{
+	if (k1 > 999)
+	{
+		k += 1;
+		k1 %= 1000;
+	}
+	if (k1 > 0)
+		printf("%lu%03d", k, k1);
+	else
+		printf("%lu", k);
 }
