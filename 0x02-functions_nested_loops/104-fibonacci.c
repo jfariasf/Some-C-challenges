@@ -47,9 +47,9 @@ int main(void)
 
 }
 /**
-* calculate_last - Prints the first 98 fibonacci numbers
-* @k: value to print but 3 digits
-* @k1: last 3 digits
+* calculate_last - Prepare the numbers and prints them
+* @k: value to print but last 4 digits
+* @k1: last 4 digits
 * Return: Always 0 (Success)
 */
 void calculate_last(unsigned long k, int k1)
