@@ -18,8 +18,6 @@ void print_diagonal(int n)
 	{
 		for (j = 0; j < n; j++)
 			_putchar((i == j) ? '\\' : ' ');
-		if (i < n - 1)
-			_putchar('\n');
+		_putchar(0x0A);
 	}
-	_putchar(0x0A);
 }
