@@ -9,8 +9,8 @@ int finddigits(int);
 void print_number(int n)
 {
 	int num = 10;
-	int numdigts = finddigits(n);
-	int maxval = power(num, numdigts - 1);
+	int numdigts; 
+	int maxval;
 	int dgtdiff;
 
 	if (n == 0)
@@ -23,6 +23,8 @@ void print_number(int n)
 		_putchar('-');
 		n *= -1;
 	}
+	numdigts=finddigits(n);
+	maxval = power(num, numdigts - 1);
 	while (maxval > 0)
 	{
 		dgtdiff = finddigits(maxval) - finddigits(n);
@@ -73,8 +75,6 @@ int finddigits(int n)
 {
 	int i = 0;
 
-	if (n < 0)
-		n *= -1;
 	while (n > 0)
 	{
 		n /= 10;
