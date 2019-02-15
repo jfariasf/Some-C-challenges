@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "stdio.h"
 int power(int, int);
 int finddigits(int);
 /**
@@ -31,7 +32,10 @@ void print_number(int n)
 			while (dgtdiff > 0)
 			{
 				_putchar(0x30);
-				maxval /= num;
+				if (maxval > 0)
+					maxval /= num;
+				if (maxval == 0)
+					return;
 				dgtdiff--;
 			}
 			_putchar(0x30 + n / maxval);
