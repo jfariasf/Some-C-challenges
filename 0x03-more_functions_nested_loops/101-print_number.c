@@ -19,21 +19,20 @@ void print_number(int n)
 	else if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
 	}
 	numdigts = finddigits(n);
 	maxval = power(10, numdigts - 1);
 	while (numdigts > 0)
 	{
-		if (n > 0)
+		if (n > 0 || n < 0)
 		{
-			_putchar('0' + n / maxval);
+			_putchar('0' + ((n < 0) ? n * -1 : n) / maxval);
 			n %= maxval;
 			maxval /= 10;
 		}
 		else
 		{
-			_putchar('0' + n);
+			_putchar('0');
 		}
 		numdigts--;
 	}
@@ -65,7 +64,7 @@ int finddigits(int n)
 {
 	int i = 0;
 
-	while (n > 0)
+	while (n > 0 || n < 0)
 	{
 		n /= 10;
 		i++;
