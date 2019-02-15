@@ -14,7 +14,7 @@ void print_number(int n)
 
 	if (n == 0)
 	{
-		_putchar(0x30);
+		_putchar(0x30 + n);
 		return;
 	}
 	else if (n < 0)
@@ -34,7 +34,7 @@ void print_number(int n)
 		}
 		else
 		{
-			_putchar('0');
+			_putchar(0x30 + n);
 		}
 		numdigts--;
 	}
