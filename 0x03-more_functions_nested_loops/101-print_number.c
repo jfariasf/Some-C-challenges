@@ -26,12 +26,12 @@ void print_number(int n)
 	{
 		if (n > 0 || n < 0)
 		{
-			if (n < 1)
+			if (n < -1)
 				_putchar('0' + -(n / maxval));
 			else if (n > 1)
 				_putchar('0' + n / maxval);
 			else
-				_putchar('0' + n);
+				_putchar('0' + ((n < 0) ? -n : n));
 			n %= maxval;
 			maxval /= 10;
 		}
