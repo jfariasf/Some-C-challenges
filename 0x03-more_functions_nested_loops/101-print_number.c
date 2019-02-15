@@ -26,7 +26,7 @@ void print_number(int n)
 	{
 		if (n > 0 || n < 0)
 		{
-			_putchar('0' + ((n < 0) ? n * -1 : n) / maxval);
+			_putchar('0' + ((n < 0) ? -(n  / maxval) : (n / maxval)));
 			n %= maxval;
 			maxval /= 10;
 		}
