@@ -10,11 +10,10 @@ void print_number(int n)
 {
 	int numdigts;
 	int maxval;
-	int num = 10;
 
 	if (n == 0)
 	{
-		_putchar(0x30 + n);
+		_putchar('0' + n);
 		return;
 	}
 	else if (n < 0)
@@ -23,18 +22,18 @@ void print_number(int n)
 		n *= -1;
 	}
 	numdigts = finddigits(n);
-	maxval = power(num, numdigts - 1);
+	maxval = power(10, numdigts - 1);
 	while (numdigts > 0)
 	{
 		if (n > 0)
 		{
-			_putchar(0x30 + n / maxval);
+			_putchar('0' + n / maxval);
 			n %= maxval;
-			maxval /= num;
+			maxval /= 10;
 		}
 		else
 		{
-			_putchar(0x30 + n);
+			_putchar('0' + n);
 		}
 		numdigts--;
 	}
