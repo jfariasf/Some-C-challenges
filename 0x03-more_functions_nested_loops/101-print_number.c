@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "stdio.h"
 int power(int, int);
 int finddigits(int);
 /**
@@ -8,10 +9,9 @@ int finddigits(int);
 */
 void print_number(int n)
 {
-	int num = 10;
-	int numdigts; 
+	int numdigts;
 	int maxval;
-	int dgtdiff;
+	int num = 10;
 
 	if (n == 0)
 	{
@@ -23,31 +23,23 @@ void print_number(int n)
 		_putchar('-');
 		n *= -1;
 	}
-	numdigts=finddigits(n);
+	numdigts = finddigits(n);
 	maxval = power(num, numdigts - 1);
-	while (maxval > 0)
+	while (numdigts > 0)
 	{
-		dgtdiff = finddigits(maxval) - finddigits(n);
-		if (dgtdiff > 0)
+		if (n > 0)
 		{
-			while (dgtdiff > 0)
-			{
-				_putchar(0x30);
-				if (maxval > 0)
-					maxval /= num;
-				if (maxval == 0)
-					return;
-				dgtdiff--;
-			}
 			_putchar(0x30 + n / maxval);
+			n %= maxval;
+			maxval /= num;
 		}
 		else
-			_putchar(0x30 + n / maxval);
-		n %= maxval;
-		maxval /= num;
+		{
+			_putchar('0');
+		}
+		numdigts--;
 	}
 }
-
 /**
 * power - Raise a number to the specified power
 * @number: Number to operate
