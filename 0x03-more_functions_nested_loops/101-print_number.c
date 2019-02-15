@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include "stdio.h"
 int power(int, int);
 int finddigits(int);
 /**
