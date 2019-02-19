@@ -1,12 +1,13 @@
 #include "holberton.h"
 
 /**
- * _puts - Takes a pointer to an int as para
- * Return: Always 0.
+ * _puts - Prints a string
+ * @str: The string to print
+ * Return: Nothing.
  */
 void _puts(char *str)
 {
-	while(*str!='\0')
+	while (*str != '\0')
 	{
 		_putchar(*str);
 		str++;
