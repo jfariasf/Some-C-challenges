@@ -1,7 +1,7 @@
 #ifndef _holberton_h
 #define _holberton_h
 
-int _putchar(int);
+void _putchar(int);
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
