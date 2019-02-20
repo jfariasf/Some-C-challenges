@@ -20,6 +20,11 @@ void rev_string(char *s)
 	}
 }
 
+/**
+ * _strlength - Returns a string length
+ * @s: A pointer to a string
+ * Return: String length.
+ */
 int _strlength(char *s)
 {
 	int c = 0;
