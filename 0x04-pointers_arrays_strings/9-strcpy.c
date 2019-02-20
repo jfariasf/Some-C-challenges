@@ -17,7 +17,7 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	}
 	src = seek(src, -(count));
-	while (count > 0)
+	while (count >= 0)
 	{
 		*dest = *src;
 		dest++;
