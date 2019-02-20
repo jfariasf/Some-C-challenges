@@ -12,6 +12,7 @@ int _atoi(char *s)
 	int counter = 0;
 	int init = 0;
 	int intvalue = 0;
+	int digit;
 
 	while (*s != '\0')
 	{
@@ -34,10 +35,14 @@ int _atoi(char *s)
 	}
 	while (counter > 0)
 	{
-		intvalue += (*(s - counter) - 0x30) * power(10, counter - 1);
+		digit = (*(s - counter) - 0x30) * power(10, counter - 1);
+		if (a > 0)
+			intvalue += digit;
+		else
+			intvalue -= digit;
 		counter--;
 	}
-	return (intvalue * a);
+	return (intvalue);
 }
 
 /**
