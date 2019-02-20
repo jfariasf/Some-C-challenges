@@ -1,5 +1,5 @@
 #include "holberton.h"
-int _strlen(char *);
+int _strlength(char *);
 /**
  * rev_string - Reverses a string
  * @s: A char pointer pointing to a string
@@ -7,7 +7,7 @@ int _strlen(char *);
  */
 void rev_string(char *s)
 {
-	int tail = _strlen(s) - 1;
+	int tail = _strlength(s) - 1;
 	char bk;
 
 	while (tail > 0)
@@ -20,7 +20,7 @@ void rev_string(char *s)
 	}
 }
 
-int _strlen(char *s)
+int _strlength(char *s)
 {
 	int c = 0;
 
