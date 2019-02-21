@@ -1,5 +1,4 @@
 #include "holberton.h"
-char *seek(char *, int);
 /**
  * _strcat - Copy a string to a buffer and returns the dest buffer.
  * @dest: the destination buffer
