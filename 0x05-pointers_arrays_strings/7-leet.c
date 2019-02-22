@@ -7,19 +7,17 @@
 char *leet(char *dest)
 {
 	char *bkdest = dest;
+	char ch[10] = "aAeEoOtTlL";
+	char le[5] = "43071";
+	int i;
 
 	while (*dest != '\0')
 	{
-		if (*dest == 0x61 || *dest == 0x41)
-			*dest = 0x34;
-		else if (*dest == 0x45 || *dest == 0x65)
-			*dest = 0x33;
-		else if (*dest == 0x6f || *dest == 0x4f)
-			*dest = 0x30;
-		else if (*dest == 0x74 || *dest == 0x54)
-			*dest = 0x37;
-		else if (*dest == 0x4c || *dest == 0x6c)
-			*dest = 0x31;
+		for (i = 0; i < 10; i++)
+		{
+			if (*dest == ch[i] || *dest == ch[i + 1])
+				*dest = le[(i + 1) / 2];
+		}
 		dest++;
 	}
 	return (bkdest);
