@@ -14,9 +14,8 @@ char *cap_string(char *dest)
 
 	while (*dest != '\0')
 	{
-		if (*dest >= 0x61 && *dest <= 0x7A && cap==1)
+		if (*dest >= 0x61 && *dest <= 0x7A && cap == 1)
 		{
-			
 			*dest -= 0x20;
 			cap = 0;
 		}
@@ -30,7 +29,6 @@ char *cap_string(char *dest)
 				break;
 			}
 		}
-	
 		dest++;
 	}
 	return (bkdest);
