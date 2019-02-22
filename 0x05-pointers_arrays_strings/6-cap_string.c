@@ -19,6 +19,7 @@ char *cap_string(char *dest)
 			if (*dest == sep[i])
 			{
 				cap = 1;
+				dest++;
 				break;
 			}
 		}
