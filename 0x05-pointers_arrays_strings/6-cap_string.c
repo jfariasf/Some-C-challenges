@@ -14,22 +14,23 @@ char *cap_string(char *dest)
 
 	while (*dest != '\0')
 	{
+		if (*dest >= 0x61 && *dest <= 0x7A && cap==1)
+		{
+			
+			*dest -= 0x20;
+			cap = 0;
+		}
+		else
+			cap = 0;
 		for (i = 0; i < 13; i++)
 		{
 			if (*dest == sep[i])
 			{
 				cap = 1;
-				dest++;
 				break;
 			}
 		}
-		if (*dest >= 0x61 && *dest <= 0x7A && cap == 1)
-		{
-			*dest -= 0x20;
-			cap = 0;
-		}
-		else if (*dest >= 0x41 && *dest <= 0x5A)
-			cap = 0;
+	
 		dest++;
 	}
 	return (bkdest);
