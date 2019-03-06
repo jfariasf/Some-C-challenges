@@ -1,7 +1,6 @@
 #include <stdlib.h>
 int _strlen(char *);
 void _cpy(char *, char *, int);
-#define BUFSIZ 1024
 /**
  * _strlen - Length of string
  * @s: char pointer
@@ -26,12 +25,12 @@ int _strlen(char *s)
 char **strtow(char *str)
 {
 	char **output;
-	char bk[BUFSIZ];
+	char bk[1024];
 	int wc = 0;
 	int len = _strlen(str);
 	int i;
 	int j = 0;
-	char c[BUFSIZ];
+	char c[1024];
 
 	if (str == NULL || len == 0)
 		return (NULL);
