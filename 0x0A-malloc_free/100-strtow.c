@@ -30,8 +30,8 @@ char **strtow(char *str)
 	int len = _strlen(str);
 	int i;
 	int w = 0, j = 0;
-	char c[len];
-	char bk[len];
+	char c[1024];
+	char bk[1024];
 
 	if (str == NULL || len == 0)
 		return (NULL);
