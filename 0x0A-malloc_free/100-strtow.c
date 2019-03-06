@@ -49,14 +49,18 @@ char **strtow(char *str)
 			j++;
 		}
 	}
-	if (j > 0)
-		wc++;
+	wc++;
+	if (bk[j - 1] == 0x20)
+	{
+		bk[j - 1] = '\0';
+		j--;
+		wc--;
+	}
 	else
-		return (NULL);
-	bk[j] = '\0';
+		bk[j] = '\0';
 	len = j;
 	j = 0;
-	output = (char **) malloc((wc) * sizeof(char *));
+	output = (char **) malloc(wc * sizeof(char *) + 1);
 	for (i = 0; i <= len; i++)
 	{
 		if (bk[i] == ' ' || bk[i] == '\0')
@@ -87,7 +91,5 @@ void _cpy(char *src, char *str, int n)
 	int i;
 
 	for (i = 0; i <= n; i++)
-	{
 		str[i] = src[i];
-	}
 }
