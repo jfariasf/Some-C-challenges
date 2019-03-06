@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 		count++;
 	}
 	test -= count;
-	array = (char *) malloc(sizeof(char) * count + 1);
+	array = (char *) malloc(sizeof(char) * (count + 1));
 	if (array == NULL)
 		return (NULL);
 	for (i = 0; i < count; i++)
