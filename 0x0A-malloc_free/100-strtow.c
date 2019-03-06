@@ -62,7 +62,7 @@ char **strtow(char *str)
 		bk[j] = '\0';
 	len = j;
 	j = 0;
-	output = (char **) malloc(wc * sizeof(char *));
+	output = (char **) malloc((wc + 1) * sizeof(char *));
 	for (i = 0; i <= len; i++)
 	{
 		if (bk[i] == ' ' || bk[i] == '\0')
