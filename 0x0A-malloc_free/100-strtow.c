@@ -1,8 +1,7 @@
 #include <stdlib.h>
-#include <limits.h>
-#include <stdio.h>
 int _strlen(char *);
 void _cpy(char *, char *, int);
+#define BUFSIZ 1024
 /**
  * _strlen - Length of string
  * @s: char pointer
