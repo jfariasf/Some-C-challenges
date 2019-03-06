@@ -50,6 +50,8 @@ char **strtow(char *str)
 		}
 	}
 	wc++;
+	if (j == 0)
+		return (NULL);
 	if (bk[j - 1] == 0x20)
 	{
 		bk[j - 1] = '\0';
