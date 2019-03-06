@@ -80,7 +80,8 @@ char **strtow(char *str)
  */
 void _cpy(char *src, char *str, int n)
 {
-	for (int i = 0; i <= n; i++)
+	int i;
+	for (i = 0; i <= n; i++)
 	{
 		str[i] = src[i];
 	}
