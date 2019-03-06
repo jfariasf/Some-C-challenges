@@ -32,7 +32,6 @@ char *argstostr(int ac, char **av)
 			array[i] = '\n';
 		else
 			array[i] = test[i];
-	
 	array[i] = '\0';
 	return (array);
 }
