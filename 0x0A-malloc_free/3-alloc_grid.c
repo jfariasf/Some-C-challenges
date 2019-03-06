@@ -23,7 +23,10 @@ int **alloc_grid(int width, int height)
 	{
 		harray[i] = (int *) malloc(sizeof(int) * width);
 		if (harray[i] == NULL)
+		{
+			free(harray);
 			return (NULL);
+		}
 		for (j = 0; j < width; j++)
 			harray[i][j] = 0;
 	}
