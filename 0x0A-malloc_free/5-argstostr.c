@@ -12,9 +12,9 @@ char *argstostr(int ac, char **av)
 	int i;
 	int count = 0;
 
-	test = *av;
 	if (ac <= 0 || av == NULL)
 		return (NULL);
+	test = *av;
 	while (ac > 0)
 	{
 		if (test[count] == '\0')
