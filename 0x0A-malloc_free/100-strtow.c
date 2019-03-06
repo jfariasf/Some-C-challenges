@@ -49,17 +49,20 @@ char **strtow(char *str)
 			j++;
 		}
 	}
-	wc++;
+	if (j > 0)
+		wc++;
+	else
+		return (NULL);
 	bk[j] = '\0';
 	len = j;
 	j = 0;
-	output = (char **) malloc((wc + 1) * sizeof(char *));
+	output = (char **) malloc((wc) * sizeof(char *));
 	for (i = 0; i <= len; i++)
 	{
 		if (bk[i] == ' ' || bk[i] == '\0')
 		{
 			c[j] = '\0';
-			*output = (char *) malloc(sizeof(char) * j + 1);
+			*output = (char *) malloc(sizeof(char) * j);
 			_cpy(c, *output, j);
 			output++;
 			j = -1;
