@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * argstostr - Arguments to string
  * @ac: Argument count
@@ -10,10 +9,10 @@
 char *argstostr(int ac, char **av)
 {
 	char *array, *test;
-	int i, count;
+	int i, count = 0;
 
 	test = *(av);
-	if (ac == 0 || av == NULL)
+	if (ac == 0 || av == NULL || ac > 127)
 		return (NULL);
 	while (ac > 0)
 	{
