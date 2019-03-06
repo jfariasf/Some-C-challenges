@@ -10,25 +10,20 @@ char *argstostr(int ac, char **av)
 {
 	char *array, *test;
 	int i;
-	long count = 0;
+	int count = 0;
 
 	test = *(av);
-	if (ac == 0 || av == NULL)
+	if (ac <= 0 || av == NULL)
 		return (NULL);
 	while (ac > 0)
 	{
-		if (*test == '\0')
+		if (test[count] == '\0')
 			ac--;
-		test++;
 		count++;
 	}
-	test -= count;
 	array = (char *) malloc(sizeof(char) * count);
 	if (array == NULL)
-	{
-		free(array);
 		return (NULL);
-	}
 	for (i = 0; i < count; i++)
 		if (test[i] == '\0')
 			array[i] = '\n';
