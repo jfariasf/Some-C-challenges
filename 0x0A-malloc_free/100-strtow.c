@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 int _strlen(char *);
 void _cpy(char *, char *, int);
 /**
@@ -52,10 +53,10 @@ char **strtow(char *str)
 	bk[j] = '\0';
 	len = j;
 	j = 0;
-	output = (char **) malloc(wc * sizeof(char *));
-	for (i = 0; i < len; i++)
+	output = (char **) malloc((wc + 1) * sizeof(char *));
+	for (i = 0; i <= len; i++)
 	{
-		if (bk[i] == ' ')
+		if (bk[i] == ' ' || bk[i] == '\0')
 		{
 			c[j] = '\0';
 			*output = (char *) malloc(sizeof(char) * j + 1);
@@ -67,7 +68,7 @@ char **strtow(char *str)
 			c[j] = bk[i];
 		j++;
 	}
-	output -= wc - 1;
+	output -= wc;
 	return (output);
 }
 /**
@@ -81,6 +82,7 @@ char **strtow(char *str)
 void _cpy(char *src, char *str, int n)
 {
 	int i;
+
 	for (i = 0; i <= n; i++)
 	{
 		str[i] = src[i];
