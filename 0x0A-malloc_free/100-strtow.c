@@ -68,7 +68,7 @@ char **strtow(char *str)
 		if (bk[i] == ' ' || bk[i] == '\0')
 		{
 			c[j] = '\0';
-			*output = (char *) malloc(sizeof(char) * j);
+			*output = (char *) malloc(sizeof(char) * j + 1);
 			_cpy(c, *output, j);
 			output++;
 			j = -1;
