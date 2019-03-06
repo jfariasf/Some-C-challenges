@@ -26,12 +26,12 @@ int _strlen(char *s)
 char **strtow(char *str)
 {
 	char **output;
-	char bk[1024];
 	int wc = 0;
 	int len = _strlen(str);
 	int i;
-	int j = 0;
-	char c[1024];
+	int w = 0, j = 0;
+	char c[len];
+	char bk[len];
 
 	if (str == NULL || len == 0)
 		return (NULL);
@@ -63,15 +63,25 @@ char **strtow(char *str)
 	len = j;
 	j = 0;
 	output = (char **) malloc((wc + 1) * sizeof(char *));
+	if (output == NULL)
+		return (NULL);
 	for (i = 0; i <= len; i++)
 	{
 		if (bk[i] == ' ' || bk[i] == '\0')
 		{
 			c[j] = '\0';
-			*output = (char *) malloc(sizeof(char) * j);
+			*output = (char *) malloc(sizeof(char) * (j + 1));
+			if (*output == NULL)
+			{
+				for (j = 0; j < w; i++)
+					free(output[j]);
+				free(output);
+				return (NULL);
+			}
 			_cpy(c, *output, j);
 			output++;
 			j = -1;
+			w++;
 		}
 		else
 			c[j] = bk[i];
