@@ -23,7 +23,10 @@ char *argstostr(int ac, char **av)
 	}
 	array = (char *) malloc(sizeof(char) * (count + 1));
 	if (array == NULL)
+	{
+		free(array);
 		return (NULL);
+	}
 	for (i = 0; i < count; i++)
 		if (test[i] == '\0')
 			array[i] = '\n';
