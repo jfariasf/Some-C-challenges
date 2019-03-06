@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <limits.h>
 /**
  * argstostr - Arguments to string
  * @ac: Argument count
@@ -12,7 +13,7 @@ char *argstostr(int ac, char **av)
 	int i, count = 0;
 
 	test = *(av);
-	if (ac == 0 || av == NULL || ac > 127)
+	if (ac == 0 || av == NULL || ac > SHRT_MAX)
 		return (NULL);
 	while (ac > 0)
 	{
