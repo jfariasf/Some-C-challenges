@@ -12,7 +12,7 @@ char *argstostr(int ac, char **av)
 	int i;
 	int count = 0;
 
-	test = *(av);
+	test = *av;
 	if (ac <= 0 || av == NULL)
 		return (NULL);
 	while (ac > 0)
@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 			ac--;
 		count++;
 	}
-	array = (char *) malloc(sizeof(char) * count);
+	array = (char *) malloc(sizeof(char) * (count + 1));
 	if (array == NULL)
 		return (NULL);
 	for (i = 0; i < count; i++)
